@@ -53,6 +53,12 @@ else
     echo "配置引入完成,请执行 source $BASHRC 更新bashrc文件"
 fi
 
+if [ `grep -c "source $BASH_DIR/theme/theme.bash" $BASHRC` -ne '0' ];then
+    echo "主题配置文件已引入,跳过"
+else
+    echo "source $BASH_DIR/theme/theme.bash" >> $BASHRC
+    echo "主题配置引入完成,请执行 source $BASHRC 更新bashrc文件"
+fi
 }
 
 bash_init() {
