@@ -6,7 +6,9 @@ export NO_PROXY=http://127.0.0.1
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias l='ls -alh'
 alias ll='ls -alh'
+
 alias proxy="export http_proxy=$HTTP_PROXY && export https_proxy=$HTTPS_PROXY"
 alias noproxy="export http_proxy=$NO_PROXY && export https_proxy=$NO_PROXY"
 alias unproxy="unset http_proxy && unset https_proxy"
@@ -24,3 +26,8 @@ alias dnode='docker exec -it node /bin/sh'
 alias dpy='docker exec -it python /bin/sh'
 alias des='docker exec -it elasticsearch /bin/bash'
 alias doracle='docker exec -it oracle11g /bin/bash'
+
+# bashrc
+alias sbrc="source $HOME/.bashrc"
+alias cbrc="cat $HOME/.bashrc"
+alias vbrc="vim $HOME/.bashrc"
