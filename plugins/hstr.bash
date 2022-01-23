@@ -16,4 +16,3 @@ HAS_CONF=`cat $BASHRC | grep -o "HH_CONFIG" `
 if [ "$HAS_CONF" != 'HH_CONFIG' ];then
     hstr --show-configuration >> ~/.bashrc
 fi
-echo 'hstr conf finished'
