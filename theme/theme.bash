@@ -50,7 +50,7 @@ function parse_git_dirty {
 		echo ""
 	fi
 }
-PS1=" \[\e[31m\]\`nonzero_return\`\[\e[m\] "
+PS1="\[\e[31m\]\`nonzero_return\`\[\e[m\]"
 
 PS1+="\[\e[33m\]\\$\[\e[m\]"
 

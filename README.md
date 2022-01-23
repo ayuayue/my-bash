@@ -1,6 +1,8 @@
 ## 我的bash脚本
 简洁干净,速度快,只提供日常用的基础功能,根据需求增加,没有多余功能
-![](https://cdn.jsdelivr.net/gh/ayuayue/cdn/wolai/202201230105964.png)
+
+加入自定义样式(包含git分支,时间,错误码,shell)
+![](https://cdn.jsdelivr.net/gh/ayuayue/cdn/wolai/202201231631522.png)
 ### 自定义别名脚本放在 alias 目录下
 
 ### 插件或函数放在 plugins 目录下
