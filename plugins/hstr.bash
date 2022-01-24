@@ -4,7 +4,7 @@
 #yum install -y htsr &> /dev/null
 #yum install -y hstr
 #HAS_CONF=`cat ~/.bashrc | grep HH_CONFIG -o`
-HSTR=`yum list installed | grep hstr | awk '{print $1}'`
+HSTR=`yum list installed | grep hstr.x86_64 | awk '{print $1}'`
 
 if [ "$HSTR" != "hstr.x86_64" ]; then
      echo "hstr 未安装,请执行 yum install hstr -y 进行安装"
