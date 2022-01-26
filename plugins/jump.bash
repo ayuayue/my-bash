@@ -8,7 +8,7 @@
 JUMP=`rpm -qa | grep jump-0.40.0-1.x86_64`
 
 if [ 'jump-0.40.0-1.x86_64' != "$JUMP" ]; then
-     echo "jump 未安装,请使用命令 rpm -iv ./plugins/jump-0.40.0-1.x86_64.rpm 进行安装"
+     echo "jump 未安装,请使用命令 rpm -iv ./jump-0.40.0-1.x86_64.rpm 进行安装"
      exit
 fi
 

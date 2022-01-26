@@ -18,3 +18,5 @@
 | alias | 自定义别名,docker,docker-compose等 |
 | theme | 自定义profile主题 地址 https://ezprompt.net/ |
 
+
+由于开启插件导致启动变慢或者刷新配置文件变慢,所以将plugin目录下的插件不在自动加载,可以进入改目录手动安装,直接执行脚本即可

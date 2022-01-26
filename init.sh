@@ -60,7 +60,7 @@ fi
 bash_init() {
     checkEnv
     ln -s $ALIAS_DIR/*.bash $ENABLE_DIR/ &> /dev/null
-    ln -s $PLUGIN_DIR/*.bash $ENABLE_DIR/ &> /dev/null
+    # ln -s $PLUGIN_DIR/*.bash $ENABLE_DIR/ &> /dev/null
     load_file
     add_bashrc
 }
