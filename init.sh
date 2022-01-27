@@ -34,6 +34,7 @@ echo '初始化文件完成'
 }
 
 add_bashrc(){
+
 if [ `grep -c "source $BASH_DIR/init.sh" $BASHRC` -ne '0' ];then
     echo "配置文件已引入,跳过"
 else
@@ -47,12 +48,19 @@ else
     echo "source $BASH_DIR/theme/theme.bash" >> $BASHRC
     echo "主题配置引入完成,请执行 source $BASHRC 更新bashrc文件"
 fi
+
+if [ `grep -c "source $BASH_DIR/env/my.env.bash" $BASHRC` -ne '0' ];then
+    echo "环境变量配置文件已引入,跳过"
+else
+    echo "source $BASH_DIR/env/my.env.bash" >> $BASHRC
+    echo "环境变量配置引入完成,请执行 source $BASHRC 更新bashrc文件"
+fi
 }
 
 bash_init() {
     checkEnv
     ln -s $ALIAS_DIR/*.bash $ENABLE_DIR/ &> /dev/null
-    ln -s $PLUGIN_DIR/*.bash $ENABLE_DIR/ &> /dev/null
+    # ln -s $PLUGIN_DIR/*.bash $ENABLE_DIR/ &> /dev/null
     load_file
     add_bashrc
 }
