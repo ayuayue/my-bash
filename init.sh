@@ -42,12 +42,12 @@ else
     echo "配置引入完成,请执行 source $BASHRC 更新bashrc文件" &> /dev/null
 fi
 
-if [ `grep -c "source $BASH_DIR/theme/theme.bash" $BASHRC` -ne '0' ];then
-    echo "主题配置文件已引入,跳过" &> /dev/null
-else
-    echo "source $BASH_DIR/theme/theme.bash" >> $BASHRC
-    echo "主题配置引入完成,请执行 source $BASHRC 更新bashrc文件" &> /dev/null
-fi
+# if [ `grep -c "source $BASH_DIR/theme/theme.bash" $BASHRC` -ne '0' ];then
+#     echo "主题配置文件已引入,跳过" &> /dev/null
+# else
+#     echo "source $BASH_DIR/theme/theme.bash" >> $BASHRC
+#     echo "主题配置引入完成,请执行 source $BASHRC 更新bashrc文件" &> /dev/null
+# fi
 
 if [ `grep -c "source $BASH_DIR/env/my.env.bash" $BASHRC` -ne '0' ];then
     echo "环境变量配置文件已引入,跳过" &> /dev/null
