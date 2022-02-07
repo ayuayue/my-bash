@@ -52,24 +52,7 @@ function parse_git_dirty {
 }
 PS1="\[\e[31m\]\`nonzero_return\`\[\e[m\]"
 
-PS1+="\[\e[33m\]\\$\[\e[m\]"
 
-PS1+="\[\e[37m\][\[\e[m\]"
-PS1+="\[\e[36m\]\u\[\e[m\]"
-PS1+="\[\e[33;40m\]@\[\e[m\]"
-PS1+="\[\e[36;40m\]\H\[\e[m\]"
-PS1+=" at \[\e[32m\]\w\[\e[m\] "
-PS1+="\[\e[37m\]]\[\e[m\]"
-
-PS1+="\[\e[32m\]\`parse_git_branch\`\[\e[m\]"
-
-PS1+=" : \[\e[37;40m\]\t\[\e[m\] "
-
-PS1+="\n"
-PS1+="\[\e[32m\]\s_\v\[\e[m\]"
-PS1+="#> "
-
-
-
-#PS1="\[\e[33m\]\\$\[\e[m\]\[\e[37m\][\[\e[m\]\[\e[36m\]\u\[\e[m\]\[\e[33;40m\]@\[\e[m\]\[\e[36;40m\]\h\[\e[m\]\[\e[37m\]]\[\e[m\]\[\e[32m\]\`parse_git_branch\`\[\e[m\] at \[\e[32m\]\w\[\e[m\] :\[\e[31m\]\`nonzero_return\`\[\e[m\] \[\e[37;40m\]\t\[\e[m\] \n \[\e[32m\]\s_\v\[\e[m\]#  "
+PS1+="\$ [\u@\H at \w] \`parse_git_branch\` : \t "
+PS1+="\n \s_\v#> "
 export PS1
