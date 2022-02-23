@@ -11,7 +11,7 @@ alias ll='ls -alh'
 
 alias proxy="export http_proxy=$HTTP_PROXY && export https_proxy=$HTTPS_PROXY"
 alias noproxy="export http_proxy=$NO_PROXY && export https_proxy=$NO_PROXY"
-alias unproxy="unset http_proxy && unset https_proxy"
+alias unproxy="unset $http_proxy && unset $https_proxy"
 
 # dnmp alias
 alias dnginx='docker exec -it nginx /bin/sh'
