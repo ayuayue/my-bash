@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 PROXY=http://192.168.190.1:7890
-NO_PROXY=http://127.0.0.1
 
 alias rm='rm -i'
 alias cp='cp -i'
@@ -8,9 +7,9 @@ alias mv='mv -i'
 alias l='ls -alh'
 alias ll='ls -alh'
 
-alias proxy="export HTTP_PROXY=$PROXY && export HTTPS_PROXY=$HTTP_PROXY"
-alias noproxy="export HTTP_PROXY=$NO_PROXY && export HTTPS_PROXY=$HTTP_PROXY"
-alias unproxy="unset $HTTP_PROXY && unset $HTTPS_PROXY"
+alias proxy="export http_proxy=$PROXY && export https_proxy=$http_proxy"
+
+alias unproxy="unset http_proxy && unset https_proxy"
 
 # dnmp alias
 alias dnginx='docker exec -it nginx /bin/sh'
