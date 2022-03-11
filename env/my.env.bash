@@ -13,3 +13,16 @@ export PATH=$PATH:$PHP:$HOME_BIN:$APACHE
 # bind 'set show-all-if-ambiguous on'
 # bind 'TAB:menu-complete'
 
+export HISTFILE=$HOME/.bash_history
+
+export HISTSIZE=12000
+
+export HISTFILESIZE=12000
+
+export HISTCONTROL=ignoredups
+
+export HISTTIMEFORMAT="`whoami` %F %T "
+
+shopt -s histappend
+
+typeset -r HISTTIMEFORMAT
