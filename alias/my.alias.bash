@@ -8,8 +8,10 @@ alias l='ls -alh'
 alias ll='ls -alh'
 
 alias proxy="export http_proxy=$PROXY && export https_proxy=$http_proxy"
-
 alias unproxy="unset http_proxy && unset https_proxy"
+
+# yum install man-pages-zh-CN
+alias cman="man -M /usr/share/man/zh_CN"
 
 # dnmp alias
 alias dnginx='docker exec -it nginx /bin/sh'
