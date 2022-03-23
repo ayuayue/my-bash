@@ -13,7 +13,7 @@ export PATH=$PATH:$PHP:$HOME_BIN:$APACHE
 # bind 'set show-all-if-ambiguous on'
 # bind 'TAB:menu-complete'
 
-export HISTFILE=$HOME/.bash_history
+export HISTFILE="$HOME/.bash_history"
 
 export HISTSIZE=12000
 
