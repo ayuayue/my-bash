@@ -21,8 +21,17 @@ export HISTFILESIZE=12000
 
 export HISTCONTROL=ignoredups
 
+
 export HISTTIMEFORMAT="`whoami` %F %T "
 
 shopt -s histappend
 
 typeset -r HISTTIMEFORMAT
+
+
+
+# yum install -y hstr
+# hstr --show-configuration
+
+# rpm -iv ../plugins/jump-0.40.0-1.x86_64.rpm
+eval "$(jump shell --bind=j)"
