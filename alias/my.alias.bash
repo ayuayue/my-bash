@@ -4,8 +4,8 @@ PROXY=http://192.168.190.1:7890
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias l='ls -alh'
-alias ll='ls -alh'
+
+alias ls="ls -alh --time-style '+%Y/%m/%d %H:%M:%S'"
 
 alias proxy="export http_proxy=$PROXY && export https_proxy=$http_proxy"
 alias unproxy="unset http_proxy && unset https_proxy"
