@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
-PROXY=http://192.168.190.1:7890
-
+PROXY="http://"
+PROXY+=`route -n | grep UG | awk '{print $2}' | awk -F . '{print $1"."$2"."$3".1"}'`
+PROXY+=":7890"
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
 alias ls="ls -alh --time-style '+%Y/%m/%d %H:%M:%S'"
 
-alias proxy="export http_proxy=$PROXY && export https_proxy=$http_proxy"
+alias proxy="export http_proxy=$PROXY && export https_proxy=$PROXY"
 alias unproxy="unset http_proxy && unset https_proxy"
 
 # yum install man-pages-zh-CN
@@ -32,3 +33,4 @@ alias doracle='docker exec -it oracle11g /bin/bash'
 alias sbrc="source $HOME/.bashrc"
 alias cbrc="cat $HOME/.bashrc"
 alias vbrc="vim $HOME/.bashrc"
+

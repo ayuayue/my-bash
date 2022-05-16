@@ -8,14 +8,9 @@ ALIAS_DIR=$BASH_DIR/alias
 PLUGIN_DIR=$BASH_DIR/plugins
 
 checkEnv() {
-    echo '初始化 my-bash 检查运行环境 ...' &> /dev/null
+    echo '初始化 my-bash 检查运行环境 ......' &> /dev/null
     if [ $SHELL != '/bin/bash' ]; then
         echo "默认shell不是/bin/bash,运行结束"
-        exit
-    fi
-
-    if [ $BASH_DIR != '/www/my-bash' ]; then
-        echo "请将改脚本放入 /www/my-bash 目录下运行"
         exit
     fi
 
@@ -28,7 +23,9 @@ checkEnv() {
 
 load_file(){
     for file in $ENABLE_DIR/*; do
+    if test -f "$file"; then
         source $file
+    fi
     done
     echo '初始化文件完成' &> /dev/null
 }
@@ -59,6 +56,7 @@ add_bashrc(){
 
 bash_init() {
     checkEnv
+    unalias -a
     ln -s $ALIAS_DIR/*.bash $ENABLE_DIR/ &> /dev/null
     # ln -s $PLUGIN_DIR/*.bash $ENABLE_DIR/ &> /dev/null
     load_file
