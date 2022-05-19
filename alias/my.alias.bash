@@ -6,7 +6,7 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
-alias ls="ls -alh --time-style '+%Y/%m/%d %H:%M:%S'"
+alias ll="ls -alh --time-style '+%Y/%m/%d %H:%M:%S'"
 
 alias proxy="export http_proxy=$PROXY && export https_proxy=$PROXY"
 alias unproxy="unset http_proxy && unset https_proxy"
