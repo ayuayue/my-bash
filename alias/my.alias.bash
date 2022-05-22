@@ -3,7 +3,7 @@ PROXY="http://"
 PROXY+=`route -n | grep UG | awk '{print $2}' | awk -F . '{print $1"."$2"."$3".1"}'`
 PROXY+=":7890"
 alias rm='rm -i'
-alias cp='cp -i'
+# alias cp='cp -i'
 alias mv='mv -i'
 
 alias ll="ls -alh --time-style '+%Y/%m/%d %H:%M:%S'"
