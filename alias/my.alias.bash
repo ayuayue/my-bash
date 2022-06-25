@@ -34,3 +34,6 @@ alias sbrc="source $HOME/.bashrc"
 alias cbrc="cat $HOME/.bashrc"
 alias vbrc="vim $HOME/.bashrc"
 
+
+# dev
+alias phpeasy="php easyswoole server"
