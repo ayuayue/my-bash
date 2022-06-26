@@ -11,9 +11,15 @@ alias proxy="export http_proxy=$PROXY && export https_proxy=$PROXY"
 alias unproxy="unset http_proxy && unset https_proxy"
 alias vimenv="vim /etc/profile.d/env.sh"
 alias vimhosts="vim /etc/hosts"
+alias vimalias="vim /etc/profile.d/aliases.sh"
+
 alias refreshhosts="cat /etc/hosts/hosts > /c/system32/drivers/etc/hosts/hosts"
 alias refreshenv="source /etc/profile"
 
+alias cmdc="cmd.exe /C"
+alias cmdk="cmd.exe /K"
+alias pwshc="powershell -c"
+alias pwshk="powershell -NoExit -c"
 
 case "$TERM" in
 xterm*)
