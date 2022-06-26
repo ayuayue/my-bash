@@ -9,9 +9,9 @@ PROXY+="127.0.0.1"
 PROXY+=":7890"
 alias proxy="export http_proxy=$PROXY && export https_proxy=$PROXY"
 alias unproxy="unset http_proxy && unset https_proxy"
-alias vimenv="code /etc/profile.d/env.sh"
-alias vimhosts="code /c/Windows/System32/drivers/etc/hosts"
-alias vimalias="code /etc/profile.d/aliases.sh"
+alias codeenv="code /etc/profile.d/env.sh"
+alias codehosts="code /c/Windows/System32/drivers/etc/hosts"
+alias codealias="code /etc/profile.d/aliases.sh"
 
 alias refreshenv="source /etc/profile"
 
