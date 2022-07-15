@@ -7,6 +7,11 @@ export LD_LIBRARY_PATH="/usr/local/instantclient"
 export APACHE="/usr/local/apache/bin"
 export PHP="/usr/local/php/bin"
 export HOME_BIN="$HOME/bin"
+export GOROOT="${HOME}/.g/go"
+export PATH="${HOME}/.g/go/bin:$PATH"
+export G_MIRROR=https://golang.google.cn/dl/
+export GOPROXY="https://proxy.golang.com.cn,direct" 
+export GO111MODULE=on
 export PATH=$PATH:$PHP:$HOME_BIN:$APACHE
 
 # bind
