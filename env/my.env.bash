@@ -10,9 +10,10 @@ export HOME_BIN="$HOME/bin"
 export GOROOT="${HOME}/.g/go"
 export G_MIRROR=https://golang.google.cn/dl/
 export GOPROXY="https://proxy.golang.com.cn,direct" 
+export GOPATH="${HOME}/go"
 export GO111MODULE=on
 export PATH="${HOME}/.g/go/bin:$PATH"
-export PATH=$PATH:$PHP:$HOME_BIN:$APACHE
+export PATH=$PATH:$PHP:$HOME_BIN:$APACHE:$GOPATH/bin
 
 # bind
 # bind 'set show-all-if-ambiguous on'
