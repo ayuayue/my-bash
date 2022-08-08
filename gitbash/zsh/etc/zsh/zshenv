@@ -1,0 +1,12 @@
+# Default PROMPT
+# my preferred locale/lang settings
+export LC_ALL=C.utf8
+export LANG=en_US.utf8
+export LC_CTYPE=en_US.utf8
+
+export PATH=/mingw64/bin/usr/bin:/usr/bin:/bin:$PATH
+
+export HISTSIZE=999999999
+export SAVEHIST=$HISTSIZE
+
+PROMPT="%F{green}%n@%m%f %F{magenta}${MSYSTEM}%f %F{yellow}%~%f %# "
