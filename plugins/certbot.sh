@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-# 参数1为域名,2是路径 使用 webroot方式申请,单域名 certbot
+# 参数1为域名,2是 root 路径 使用 webroot方式申请,单域名 certbot
 echo "请在 nginx 域名配置文件中加入一下内容";
 echo  "===="
 cat  <<EOF
