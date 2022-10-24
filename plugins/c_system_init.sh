@@ -7,14 +7,14 @@
 
 yum install glibc-common -y
 yum install -y langpacks-zh_CN
-yum install git -y
+yum install git wget -y
 echo 'export LC_ALL="zh_CN.UTF-8"' >> /etc/profile
 source /etc/profile
 echo 'LANG="zh_CN.UTF-8"' >> /etc/locale.conf
 source /etc/locale.conf
 
-sudo mkdir -p /etc/docker
-sudo tee /etc/docker/daemon.json <<-'EOF'
+mkdir -p /etc/docker
+tee /etc/docker/daemon.json <<-'EOF'
 {
   "registry-mirrors" : [
     "https://cxlpw11m.mirror.aliyuncs.com",
@@ -30,11 +30,11 @@ sudo tee /etc/docker/daemon.json <<-'EOF'
   "experimental" : true
 }
 EOF
-sudo systemctl daemon-reload
-sudo systemctl restart docker
+systemctl daemon-reload
+systemctl restart docker
 
 cd ~
-wget https://jaist.dl.sourceforge.net/project/zsh/zsh/5.8/zsh-5.8.tar.xz
+wget https://jaist.dl.sourceforge.net/project/zsh/zsh/5.8/zsh-5.8.tar.xz --no-check-certificate
 tar xvf zsh-5.8.tar.xz
 cd zsh-5.8 && ./configure && make && make install
 echo /usr/local/bin/zsh >> /etc/shells
@@ -58,3 +58,4 @@ systemctl start ntpd
 
 
 yum update
+
