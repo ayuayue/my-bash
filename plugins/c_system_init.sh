@@ -46,12 +46,3 @@ cd ~
 
 sh -c "$(curl -fsSL https://gitee.com/caoayu/my-bash/raw/master/plugins/oh-my-zsh_install.sh)"
 
-export ZSH_CUSTOM="~/.oh-my-zsh/custom"
-
-git clone https://gitee.com/skarner/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-
-git clone https://gitee.com/Annihilater/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-
-echo "omz plugin enable docker docker-compose yum systemd rust python npm supervisor yarn pip pm2 node man aliases command-not-found history firewalld golang composer cp zsh-autosuggestions zsh-syntax-highlighting" >> ~/.zshrc
-
-exec zsh -l
