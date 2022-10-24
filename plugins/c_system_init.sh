@@ -7,7 +7,7 @@
 
 yum install glibc-common -y
 yum install -y langpacks-zh_CN
-
+yum install git -y
 echo 'export LC_ALL="zh_CN.UTF-8"' >> /etc/profile
 source /etc/profile
 echo 'LANG="zh_CN.UTF-8"' >> /etc/locale.conf
