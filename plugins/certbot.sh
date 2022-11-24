@@ -18,7 +18,7 @@ DOMAIN=$1
 DIR=$2
 echo "域名: $DOMAIN";
 echo "路径: $DIR";
-# 根据命令手动添加 txt 记录到域名解析
+# 根据命令手动添加 txt 记录到域名解析,无须配置nginx， --webroot 需要配置
 certbot certonly --agree-tos -d $DOMAIN \
 --preferred-challenges dns \
 --manual --server https://acme-v02.api.letsencrypt.org/directory \
