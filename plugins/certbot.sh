@@ -18,8 +18,11 @@ DOMAIN=$1
 DIR=$2
 echo "域名: $DOMAIN";
 echo "路径: $DIR";
+# 根据命令手动添加 txt 记录到域名解析
 certbot certonly --agree-tos -d $DOMAIN \
---webroot -w $DIR \
+--preferred-challenges dns \
+--manual --server https://acme-v02.api.letsencrypt.org/directory \
+# --webroot -w $DIR \
 --dry-run
 
 echo "请执行: certbot certonly --webroot -w $DIR -d $DOMAIN 生成证书"
